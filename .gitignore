@@ -1,0 +1,15 @@
+*.gz
+*.txt
+*.pth
+# *.ipynb
+*.npy
+*.pyc
+*.json
+*.pt
+*.safetensors
+# *.md
+*.pdf
+*.png
+*.sh
+Seq_Exp/
+Test-gaudi/
