@@ -20,7 +20,7 @@ Currently, we have implemented two traditional recommendation models and four LL
     - PMF: [Paper](https://dl.acm.org/doi/10.5555/2981562.2981720) / [Code](https://github.com/NAVER-INTEL-Co-Lab/gaudi-recsys/tree/main/MF-gaudi)
     - SASRec: [Paper](https://arxiv.org/abs/1808.09781) / [Code](https://github.com/NAVER-INTEL-Co-Lab/gaudi-recsys/tree/main/SASRec-gaudi)
 
-- LLM-based recommendation models: [Codes](https://github.com/NAVER-INTEL-Co-Lab/gaudi-recsys/tree/main/Seq_Exp/new_recsys)
+- LLM-based recommendation models: [Codes](https://github.com/NAVER-INTEL-Co-Lab/gaudi_recsys_public/tree/master/On_Going_for_Gaudi)
     - TALLRec: [Paper](https://arxiv.org/abs/2305.00447)
     - LLaRA: [Paper](https://arxiv.org/abs/2312.02445)
     - CoLLM: [Paper](https://arxiv.org/abs/2310.19488)
