@@ -22,11 +22,12 @@ python main.py --device hpu --dataset Industrial_and_Scientific --nn_parameter
 
 If you train SASRec using the `--nn_parameter` flag, be sure to use `--nn_parameter` for both training and inference of baseline.
 
-To choose a model among **TALLRec**, **CoLLM**, and **LLaRA**, use the `--baseline` argument with one of the following options:
+To choose a model among **TALLRec**, **CoLLM**, **LLaRA**, and **A-LLMRec** use the `--baseline` argument with one of the following options:
 
 - `tallrec`
 - `Collm`
 - `llara`
+- `a-llmrec`
 
 ```
 python title_generation_main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline tallrec --save_dir tallrec
@@ -38,6 +39,10 @@ python title_generation_main_baseline.py --device hpu --pretrain_stage2 --rec_pr
 
 ```
 python title_generation_main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline llara --save_dir llara
+```
+
+```
+python title_generation_main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline a-llmrec --save_dir a-llmrec
 ```
 
 ### Evaluation
@@ -52,11 +57,16 @@ python eval.py
 
 If you train SASRec using the `--nn_parameter` flag, be sure to use `--nn_parameter` for both training and inference of baseline.
 
-To choose a model among **TALLRec**, **CoLLM**, and **LLaRA**, use the `--baseline` argument with one of the following options:
+In item retrieval, special tokens are generated using `nn.Embedding`. However, due to issues with training `nn.Embedding` on Gaudi-v2, tokens need to be generated using `nn.Parameter` instead for proper training.
+
+The current code is configured to automatically use `nn.Parameter` when running on HPU.
+
+To choose a model among **TALLRec**, **CoLLM**, **LLaRA**, and **A-LLMRec** use the `--baseline` argument with one of the following options:
 
 - `tallrec`
 - `Collm`
 - `llara`
+- `a-llmrec`
 
 ```
 python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline tallrec --save_dir tallrec
@@ -70,8 +80,12 @@ python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data In
 python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline llara --save_dir llara
 ```
 
+```
+python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline a-llmrec --save_dir a-llmrec
+```
+
 ### Evalutaion
 
 ```
-python main_baseline.py --device hpu --inference --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline tallrec --save_dir tallrec
+python main_baseline.py --device hpu --inference --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline tallrec --save_dir tallrecbest
 ```
