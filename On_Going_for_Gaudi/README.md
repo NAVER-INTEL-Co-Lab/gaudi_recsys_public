@@ -30,15 +30,15 @@ To choose a model among **TALLRec**, **CoLLM**, **LLaRA**, and **A-LLMRec** use 
 - `a-llmrec`
 
 ```
-python title_generation_main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline tallrec --save_dir tallrec
+python title_generation_main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline tallrec --save_dir tallrec --bath_size2 2
 ```
 
 ```
-python title_generation_main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline Collm --save_dir Collm
+python title_generation_main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline Collm --save_dir Collm --bath_size2 2
 ```
 
 ```
-python title_generation_main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline llara --save_dir llara
+python title_generation_main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline llara --save_dir llara --bath_size2 2
 ```
 
 ```
@@ -69,19 +69,19 @@ To choose a model among **TALLRec**, **CoLLM**, **LLaRA**, and **A-LLMRec** use 
 - `a-llmrec`
 
 ```
-python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline tallrec --save_dir tallrec
+python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline tallrec --save_dir tallrec --bath_size2 2
 ```
 
 ```
-python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline Collm --save_dir Collm
+python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline Collm --save_dir Collm --bath_size2 2
 ```
 
 ```
-python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline llara --save_dir llara
+python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline llara --save_dir llara --bath_size2 2
 ```
 
 ```
-python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline a-llmrec --save_dir a-llmrec
+python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline a-llmrec --save_dir a-llmrec --bath_size2 2
 ```
 
 ### Evalutaion
