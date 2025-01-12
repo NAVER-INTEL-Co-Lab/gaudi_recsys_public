@@ -6,6 +6,7 @@ In this repository, we have implemented three llm-based recommendation models:
 - [**TALLRec**](https://arxiv.org/abs/2305.00447)
 - [**LLaRA**](https://arxiv.org/abs/2312.02445)
 - [**CoLLM**](https://arxiv.org/abs/2310.19488)
+- [**A-LLMRec**](https://arxiv.org/abs/2404.11343)
 - We use LLaMA-3.2-3b-instruct.
 
 ## Pre-train CF-RecSys (SASRec)
@@ -69,19 +70,21 @@ To choose a model among **TALLRec**, **CoLLM**, **LLaRA**, and **A-LLMRec** use 
 - `a-llmrec`
 
 ```
-python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline tallrec --save_dir tallrec --bath_size2 2
+python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline tallrec --save_dir tallrec --bath_size2 4
 ```
 
 ```
-python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline Collm --save_dir Collm --bath_size2 2
+python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline Collm --save_dir Collm --bath_size2 4
 ```
 
 ```
-python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline llara --save_dir llara --bath_size2 2
+python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline llara --save_dir llara --bath_size2 4
 ```
 
 ```
-python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline a-llmrec --save_dir a-llmrec --bath_size2 2
+python main_baseline.py --device hpu --pretrain_stage1 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline a-llmrec --save_dir a-llmrec --bath_size1 8 --num_epochs 5
+
+python main_baseline.py --device hpu --pretrain_stage2 --rec_pre_trained_data Industrial_and_Scientific --nn_parameter --baseline a-llmrec --save_dir a-llmrec --bath_size2 4
 ```
 
 ### Evalutaion
