@@ -12,7 +12,7 @@ We demonstrate our implementation of recommendation models, focusing on integrat
     - By leveraging Gaudi-v2, we aim to integrate multimodal data (e.g., visual, audio) to enhance item representations beyond text-based features. This exploration provides insights into improving recommendation performance through multimodal learning.
 4. Issue Identification
     - While implementing and training these models on Gaudi-v2, we identified several challenges related to the Gaudi-v2
-        - About `nn.Embedding` [Issue - MF](https://github.com/NAVER-INTEL-Co-Lab/gaudi_recsys_public/tree/master/MF-gaudi), [Issue - SASRec](https://github.com/NAVER-INTEL-Co-Lab/gaudi_recsys_public/tree/master/SASRec-gaudi), [Issue - LLM4Rec](https://github.com/NAVER-INTEL-Co-Lab/gaudi_recsys_public/tree/master/On_Going_for_Gaudi).
+        - About `nn.Embedding` [Issue](https://github.com/NAVER-INTEL-Co-Lab/gaudi_recsys_public/tree/master/SASRec-gaudi).
         - About `LoRA` [Link](https://github.com/NAVER-INTEL-Co-Lab/gaudi_recsys_public/blob/master/On_Going_for_Gaudi/bit_load_error.ipynb)
         
             Huggingface doesn’t support 8-bit operations on Gaudi-v2 
