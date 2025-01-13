@@ -8,7 +8,7 @@ By running `main.py`, the datasets are automatically downloaded and preprocessed
 
 ## Model Training:
 
-E.g., train SASRec on `raw_Industrial_and_Scientific `
+E.g., train PMF on `raw_Industrial_and_Scientific `
 ```
 python main.py --dataset Industrial_and_Scientific  --device hpu
 ```

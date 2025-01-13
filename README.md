@@ -24,7 +24,7 @@ We demonstrate our implementation of recommendation models, focusing on integrat
 
 Currently, we have implemented two traditional recommendation models and four LLM-based recommendation models:
 - Traditional recommendation models
-    - MF: [Code](https://github.com/NAVER-INTEL-Co-Lab/gaudi_recsys_public/tree/master/MF-gaudi)
+    - PMF: [Code](https://github.com/NAVER-INTEL-Co-Lab/gaudi_recsys_public/tree/master/MF-gaudi)
     - SASRec: [Paper](https://arxiv.org/abs/1808.09781) / [Code](https://github.com/NAVER-INTEL-Co-Lab/gaudi_recsys_public/tree/master/SASRec-gaudi)
 
 - LLM-based recommendation models: [Codes](https://github.com/NAVER-INTEL-Co-Lab/gaudi_recsys_public/tree/master/On_Going_for_Gaudi)
